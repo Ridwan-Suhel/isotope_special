@@ -1,0 +1,137 @@
+.gallery{}
+.gallery .button-group{}
+.gallery .button-group ul{
+    list-style-type: none;
+}
+.gallery .button-group ul li{
+    display: inline-block;
+    margin: 0px 10px;
+    border-right: 1px solid #333;
+    line-height: 1;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.gallery .button-group ul li:last-child{
+    border-right: 0px;
+}
+.gallery .button-group ul li.active{
+    color: red;
+}
+.gallery .gallery-item{
+    position: relative;
+    background: red;
+    transition: .5s;
+    overflow: hidden;
+}
+.gallery .gallery-item:before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: #0080007d;
+    opacity: 0.9;
+}
+.gallery .gallery-item img{
+    
+}
+.gallery .gallery-item .item-inner{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(255, 0, 0, 0.74);
+    text-align: center;
+    transition: .3s;
+/*    transform: scale(0);*/
+    transform: translateY(100%) rotate(45deg);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+/*    visibility: hidden;*/
+}
+.gallery .gallery-item:hover .item-inner{
+    transform: translateY(0) rotate(0deg);
+/*    transform: scale(1);*/
+/*    width: 100%;*/
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.gallery .gallery-item .item-inner span{
+    font-size: 60px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    cursor: pointer;
+
+}
+.wheel{
+    position: absolute;
+    bottom: 10%;
+    left: 5px;
+    transition: .7s;
+    font-weight: bold;
+    transform: rotate(0deg);
+}
+.wheel img{
+    width: 60px;
+}
+.gallery .gallery-item:hover .wheel{
+    transform: rotate(-190deg);
+}
+.padding-2{
+    padding: 2px;
+}
+.test{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .3s;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 0px 20px;
+    color: #fff;
+}
+
+.gallery .gallery-item:hover .test{
+    top: 20%;
+}
+/*------------------collapse section--------------*/
+.collapse_section{
+}
+.collapse_section .btn{
+    width: 100%;
+    border-radius: 0px;
+    background: #acacac;
+    outline: none;
+    padding: 20px 0px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.collapse_section .btn:focus{
+   outline: 0;
+   box-shadow: none;
+    background: #f4f4f4;
+}
+.collapse_section .btn i{
+    color: #333;
+    position: absolute;
+    right: 30px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+}
+.collapse_section .btn i:before{
+    content: '\f077';   
+}
+
+.collapse_section .btn.collapsed i:before{
+    content: '\f078';   
+}
